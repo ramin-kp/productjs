@@ -27,7 +27,10 @@ body {
     @apply h-9 px-2 bg-transparent text-lg placeholder:font-LarsseitMedium border-2 border-blue-500 dark:text-white rounded-md outline-none;
   }
   .btn-section {
-    @apply py-1.5 px-4 text-white bg-blue-600 dark:bg-blue-500 rounded-md;
+    @apply py-1.5 px-4 font-LarsseitMedium text-white bg-blue-600 dark:bg-blue-500 rounded-md;
+  }
+  .btn-selected {
+    @apply py-1.5 px-4 border-2 border-blue-400 bg-transparent text-blue-600 dark:text-white rounded-md;
   }
   .grid-box {
     @apply bg-white text-zinc-600 p-4 dark:bg-zinc-700 shadow dark:text-white rounded-md transition-all hover:cursor-pointer hover:-translate-y-1;

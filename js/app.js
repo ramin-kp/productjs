@@ -2,6 +2,14 @@ const $ = document;
 const inputSection = document.querySelector(".input-section");
 const products = $.querySelectorAll(".product__section--item");
 const btnEls = $.querySelectorAll(".btn-section");
+const changeClass = (filter) => {
+  btnEls.forEach((btnEl) => {
+    const btnDateset = btnEl.dataset.filter;
+    filter === btnDateset
+      ? btnEl.classList.add("btn-selected")
+      : btnEl.classList.remove("btn-selected");
+  });
+};
 const searchHandler = (e) => {
   const searchValue = e.target.value.toLowerCase().trim();
   products.forEach((product) => {
@@ -15,6 +23,7 @@ const searchHandler = (e) => {
 };
 const btnHandler = (e) => {
   const filter = e.target.dataset.filter;
+  changeClass(filter);
   products.forEach((product) => {
     const category = product.dataset.category;
     if (filter === "all") {
