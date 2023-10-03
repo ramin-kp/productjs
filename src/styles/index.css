@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Larsseit Light";
+    src: url(./../fonts/Larsseit-Light.woff2) format(woff2);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Larsseit Medium";
+    src: url(./../fonts/Larsseit-Medium.woff2) format(woff2);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Larsseit Bold";
+    src: url(../fonts/Larsseit-Bold.woff2) format(woff2);
+    font-display: swap;
+  }
+}
+body {
+  @apply font-LarsseitLight bg-gray-100 dark:bg-zinc-800;
+}
+@layer components {
+  .input-section {
+    @apply h-9 px-2 bg-transparent text-lg placeholder:font-LarsseitMedium border-2 border-blue-500 dark:text-white rounded-md outline-none;
+  }
+  .btn-section {
+    @apply py-1.5 px-4 text-white bg-blue-600 dark:bg-blue-500 rounded-md;
+  }
+  .grid-box {
+    @apply bg-white text-zinc-600 p-4 dark:bg-zinc-700 shadow dark:text-white rounded-md transition-all hover:cursor-pointer hover:-translate-y-1;
+  }
+}

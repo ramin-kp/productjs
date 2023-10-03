@@ -1,13 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>products-Project</title>
     <link rel="stylesheet" href="./src/styles/output.css" />
   </head>
   <body>
-    <p class="bg-rose-500">ramin</p>
+    <header
+      class="fixed inset-0 w-[98%] md:w-[90%] mx-auto h-16 mb-2 bg-blue-600 font-LarsseitBold text-xl text-white rounded-2xl"
+    >
+      <div class="flex items-center justify-between h-full px-4">
+        <h1 class="mx-4">products Page</h1>
+        <button
+          class="inline-block dark:hidden px-1 py-2 bg-white text-zinc-700 rounded-md"
+        >
+          darkMod
+        </button>
+        <button
+          class="hidden dark:inline-block px-1 py-2 bg-white text-zinc-700 rounded-md"
+        >
+          lightMod
+        </button>
+      </div>
+    </header>
+    <main class="mt-28">
+      <section class="filter__section container">
+        <div>
+          <input
+            class="input-section mb-2.5"
+            type="text"
+            placeholder="search products"
+          />
+        </div>
+        <div class="mb-2">
+          <button class="btn-section">All</button>
+          <button class="btn-section">tech</button>
+          <button class="btn-section">clothing</button>
+          <button class="btn-section">health</button>
+        </div>
+        <div>
+          <input
+            class="input-section"
+            type="number"
+            placeholder="search price"
+          />
+        </div>
+      </section>
+      <section class="products__section container my-5">
+        <div class="grid gap-4 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div class="grid-box">
+            <div>
+              <img src="./src/images/iphone.png" alt="" />
+            </div>
+            <div>
+              <h2>iphone14-pro</h2>
+              <p>117 $</p>
+              <span></span>
+            </div>
+          </div>
+          <div class="grid-box">
+            <div>
+              <img src="./src/images/airpods.png" alt="" />
+            </div>
+            <div>
+              <h2>airpods</h2>
+              <p>105 $</p>
+              <span></span>
+            </div>
+          </div>
+          <div class="grid-box">
+            <div>
+              <img src="./src/images/cream.png" alt="" />
+            </div>
+            <div>
+              <h2>cream</h2>
+              <p>11 $</p>
+              <span></span>
+            </div>
+          </div>
+          <div class="grid-box">
+            <div>
+              <img src="./src/images/jacket.png" alt="" />
+            </div>
+            <div>
+              <h2>jacket</h2>
+              <p>50 $</p>
+              <span></span>
+            </div>
+          </div>
+          <div class="grid-box">
+            <div>
+              <img src="./src/images/shampoo.png" alt="" />
+            </div>
+            <div>
+              <h2>shampoo</h2>
+              <p>8 $</p>
+              <span></span>
+            </div>
+          </div>
+          <div class="grid-box">
+            <div>
+              <img src="./src/images/shoes.png" alt="" />
+            </div>
+            <div>
+              <h2>shoes</h2>
+              <p>25 $</p>
+              <span></span>
+            </div>
+          </div>
+          <div class="grid-box">
+            <div>
+              <img src="./src/images/vitamin.png" alt="" />
+            </div>
+            <div>
+              <h2>vitamin</h2>
+              <p>7.5 $</p>
+              <span></span>
+            </div>
+          </div>
+          <div class="grid-box">
+            <div>
+              <img src="./src/images/watch.png" alt="" />
+            </div>
+            <div>
+              <h2>appel-watch</h2>
+              <p>83 $</p>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="./js/app.js"></script>
   </body>
 </html>
