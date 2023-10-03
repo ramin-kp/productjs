@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,16 +12,18 @@
     >
       <div class="flex items-center justify-between h-full px-4">
         <h1 class="mx-4">products Page</h1>
-        <button
-          class="inline-block dark:hidden px-1 py-2 bg-white text-zinc-700 rounded-md"
-        >
-          darkMod
-        </button>
-        <button
-          class="hidden dark:inline-block px-1 py-2 bg-white text-zinc-700 rounded-md"
-        >
-          lightMod
-        </button>
+        <div class="theme-toggle">
+          <button
+            class="inline-block dark:hidden px-1 py-2 bg-zinc-700 text-white rounded-md"
+          >
+            darkMod
+          </button>
+          <button
+            class="hidden dark:inline-block px-1 py-2 bg-white text-zinc-700 rounded-md"
+          >
+            lightMod
+          </button>
+        </div>
       </div>
     </header>
     <main class="mt-28">
@@ -34,10 +36,10 @@
           />
         </div>
         <div class="mb-2">
-          <button class="btn-section btn-selected" data-filter="all">All</button>
-          <button class="btn-section" data-filter="tech">
-            tech
+          <button class="btn-section btn-selected" data-filter="all">
+            All
           </button>
+          <button class="btn-section" data-filter="tech">tech</button>
           <button class="btn-section" data-filter="clothing">clothing</button>
           <button class="btn-section" data-filter="health">health</button>
         </div>
@@ -55,7 +57,11 @@
         >
           <div class="grid-box product__section--item" data-category="tech">
             <div>
-              <img src="./src/images/iphone.png" alt="products img" />
+              <img
+                class="rounded-md"
+                src="./src/images/iphone.png"
+                alt="products img"
+              />
             </div>
             <div>
               <h2 class="">iphone14-pro</h2>
@@ -65,7 +71,11 @@
           </div>
           <div class="grid-box product__section--item" data-category="tech">
             <div>
-              <img src="./src/images/airpods.png" alt="products img" />
+              <img
+                class="rounded-md"
+                src="./src/images/airpods.png"
+                alt="products img"
+              />
             </div>
             <div>
               <h2 class="">airpods</h2>
@@ -75,7 +85,11 @@
           </div>
           <div class="grid-box product__section--item" data-category="health">
             <div>
-              <img src="./src/images/cream.png" alt="products img" />
+              <img
+                class="rounded-md"
+                src="./src/images/cream.png"
+                alt="products img"
+              />
             </div>
             <div>
               <h2 class="">cream</h2>
@@ -85,7 +99,11 @@
           </div>
           <div class="grid-box product__section--item" data-category="clothing">
             <div>
-              <img src="./src/images/jacket.png" alt="products img" />
+              <img
+                class="rounded-md"
+                src="./src/images/jacket.png"
+                alt="products img"
+              />
             </div>
             <div>
               <h2 class="">jacket</h2>
@@ -95,7 +113,11 @@
           </div>
           <div class="grid-box product__section--item" data-category="health">
             <div>
-              <img src="./src/images/shampoo.png" alt="products img" />
+              <img
+                class="rounded-md"
+                src="./src/images/shampoo.png"
+                alt="products img"
+              />
             </div>
             <div>
               <h2 class="">shampoo</h2>
@@ -105,7 +127,11 @@
           </div>
           <div class="grid-box product__section--item" data-category="clothing">
             <div>
-              <img src="./src/images/shoes.png" alt="products img" />
+              <img
+                class="rounded-md"
+                src="./src/images/shoes.png"
+                alt="products img"
+              />
             </div>
             <div>
               <h2 class="">shoes</h2>
@@ -115,7 +141,11 @@
           </div>
           <div class="grid-box product__section--item" data-category="health">
             <div>
-              <img src="./src/images/vitamin.png" alt="products img" />
+              <img
+                class="rounded-md"
+                src="./src/images/vitamin.png"
+                alt="products img"
+              />
             </div>
             <div>
               <h2 class="">vitamin</h2>
@@ -125,7 +155,11 @@
           </div>
           <div class="grid-box product__section--item" data-category="tech">
             <div>
-              <img src="./src/images/watch.png" alt="products img" />
+              <img
+                class="rounded-md"
+                src="./src/images/watch.png"
+                alt="products img"
+              />
             </div>
             <div>
               <h2 class="">appel-watch</h2>
@@ -135,7 +169,11 @@
           </div>
           <div class="grid-box product__section--item" data-category="clothing">
             <div>
-              <img src="./src/images/bag.png" alt="products img" />
+              <img
+                class="rounded-md"
+                src="./src/images/bag.png"
+                alt="products img"
+              />
             </div>
             <div>
               <h2 class="">bag</h2>

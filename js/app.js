@@ -1,7 +1,20 @@
 const $ = document;
-const inputSection = document.querySelector(".input-section");
+const themeToggle = $.querySelector(".theme-toggle");
+const inputSection = $.querySelector(".input-section");
 const products = $.querySelectorAll(".product__section--item");
 const btnEls = $.querySelectorAll(".btn-section");
+const themeHandler = () => {
+  const them = localStorage.getItem("theme");
+
+  console.log(them);
+  if (them === "dark") {
+    document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", "light");
+  } else {
+    localStorage.setItem("theme", "dark");
+    document.documentElement.classList.toggle("dark");
+  }
+};
 const changeClass = (filter) => {
   btnEls.forEach((btnEl) => {
     const btnDateset = btnEl.dataset.filter;
@@ -40,3 +53,4 @@ inputSection.addEventListener("keydown", searchHandler);
 btnEls.forEach((btnEl) => {
   btnEl.addEventListener("click", btnHandler);
 });
+themeToggle.addEventListener("click", themeHandler);
