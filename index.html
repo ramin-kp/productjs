@@ -8,7 +8,7 @@
   </head>
   <body>
     <header
-      class="fixed inset-0 w-[98%] md:w-[90%] mx-auto h-16 mb-2 bg-blue-600 font-LarsseitBold text-xl text-white rounded-2xl"
+      class="fixed inset-0 w-[98%] md:w-[90%] mx-auto h-16 mb-2 z-50 bg-blue-600 font-LarsseitBold text-xl text-white rounded-2xl"
     >
       <div class="flex items-center justify-between h-full px-4">
         <h1 class="mx-4">products Page</h1>
@@ -34,10 +34,10 @@
           />
         </div>
         <div class="mb-2">
-          <button class="btn-section">All</button>
-          <button class="btn-section">tech</button>
-          <button class="btn-section">clothing</button>
-          <button class="btn-section">health</button>
+          <button class="btn-section" data-filter="all">All</button>
+          <button class="btn-section" data-filter="tech">tech</button>
+          <button class="btn-section" data-filter="clothing">clothing</button>
+          <button class="btn-section" data-filter="health">health</button>
         </div>
         <div>
           <input
@@ -48,84 +48,96 @@
         </div>
       </section>
       <section class="products__section container my-5">
-        <div class="grid gap-4 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <div class="grid-box">
+        <div
+          class="grid gap-4 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        >
+          <div class="grid-box product__section--item" data-category="tech">
             <div>
-              <img src="./src/images/iphone.png" alt="" />
+              <img src="./src/images/iphone.png" alt="products img" />
             </div>
             <div>
-              <h2>iphone14-pro</h2>
+              <h2 class="">iphone14-pro</h2>
               <p>117 $</p>
               <span></span>
             </div>
           </div>
-          <div class="grid-box">
+          <div class="grid-box product__section--item" data-category="tech">
             <div>
-              <img src="./src/images/airpods.png" alt="" />
+              <img src="./src/images/airpods.png" alt="products img" />
             </div>
             <div>
-              <h2>airpods</h2>
+              <h2 class="">airpods</h2>
               <p>105 $</p>
               <span></span>
             </div>
           </div>
-          <div class="grid-box">
+          <div class="grid-box product__section--item" data-category="health">
             <div>
-              <img src="./src/images/cream.png" alt="" />
+              <img src="./src/images/cream.png" alt="products img" />
             </div>
             <div>
-              <h2>cream</h2>
+              <h2 class="">cream</h2>
               <p>11 $</p>
               <span></span>
             </div>
           </div>
-          <div class="grid-box">
+          <div class="grid-box product__section--item" data-category="clothing">
             <div>
-              <img src="./src/images/jacket.png" alt="" />
+              <img src="./src/images/jacket.png" alt="products img" />
             </div>
             <div>
-              <h2>jacket</h2>
+              <h2 class="">jacket</h2>
               <p>50 $</p>
               <span></span>
             </div>
           </div>
-          <div class="grid-box">
+          <div class="grid-box product__section--item" data-category="health">
             <div>
-              <img src="./src/images/shampoo.png" alt="" />
+              <img src="./src/images/shampoo.png" alt="products img" />
             </div>
             <div>
-              <h2>shampoo</h2>
+              <h2 class="">shampoo</h2>
               <p>8 $</p>
               <span></span>
             </div>
           </div>
-          <div class="grid-box">
+          <div class="grid-box product__section--item" data-category="clothing">
             <div>
-              <img src="./src/images/shoes.png" alt="" />
+              <img src="./src/images/shoes.png" alt="products img" />
             </div>
             <div>
-              <h2>shoes</h2>
+              <h2 class="">shoes</h2>
               <p>25 $</p>
               <span></span>
             </div>
           </div>
-          <div class="grid-box">
+          <div class="grid-box product__section--item" data-category="health">
             <div>
-              <img src="./src/images/vitamin.png" alt="" />
+              <img src="./src/images/vitamin.png" alt="products img" />
             </div>
             <div>
-              <h2>vitamin</h2>
+              <h2 class="">vitamin</h2>
               <p>7.5 $</p>
               <span></span>
             </div>
           </div>
-          <div class="grid-box">
+          <div class="grid-box product__section--item" data-category="tech">
             <div>
-              <img src="./src/images/watch.png" alt="" />
+              <img src="./src/images/watch.png" alt="products img" />
             </div>
             <div>
-              <h2>appel-watch</h2>
+              <h2 class="">appel-watch</h2>
               <p>83 $</p>
+              <span></span>
+            </div>
+          </div>
+          <div class="grid-box product__section--item" data-category="clothing">
+            <div>
+              <img src="./src/images/bag.png" alt="products img" />
+            </div>
+            <div>
+              <h2 class="">bag</h2>
+              <p>16 $</p>
               <span></span>
             </div>
           </div>

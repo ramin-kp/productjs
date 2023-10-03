@@ -587,8 +587,6 @@ video {
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
-    padding-right: 0.7rem;
-    padding-left: 0.7rem;
   }
 }
 
@@ -758,6 +756,10 @@ video {
 
 .isolation-auto {
   isolation: auto;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .float-right {
@@ -2540,8 +2542,6 @@ body {
   @media (min-width: 1024px) {
     .sm\:container {
       max-width: 1024px;
-      padding-right: 0.7rem;
-      padding-left: 0.7rem;
     }
   }
 
@@ -2595,10 +2595,6 @@ body {
 }
 
 @media (min-width: 640px) {
-  .sm\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .sm\:underline {
     text-decoration-line: underline;
   }
