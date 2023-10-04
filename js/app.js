@@ -2,7 +2,11 @@ const $ = document;
 const themeToggle = $.querySelector(".theme-toggle");
 const inputSection = $.querySelector(".input-section");
 const products = $.querySelectorAll(".product__section--item");
-const btnEls = $.querySelectorAll(".btn-section");
+const btnEls = $.querySelectorAll(".filter__section--btn");
+const priceButton = $.querySelector(".filter__section--price").querySelector(
+  "button"
+);
+
 const themeHandler = () => {
   const them = localStorage.getItem("theme");
 
@@ -11,8 +15,8 @@ const themeHandler = () => {
     document.documentElement.classList.toggle("dark");
     localStorage.setItem("theme", "light");
   } else {
-    localStorage.setItem("theme", "dark");
     document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", "dark");
   }
 };
 const changeClass = (filter) => {
@@ -49,8 +53,24 @@ const btnHandler = (e) => {
   });
 };
 
+const priceHandler = (e) => {
+  const searchPrice = +e.target.parentElement.children[0].value;
+  products.forEach((product) => {
+    const productPrice = product.children[1].children[1].innerText;
+    const finalPrice = +productPrice.split(" ")[0];
+    if (!searchPrice) {
+      product.style.display = "block";
+    } else {
+      searchPrice === finalPrice
+        ? (product.style.display = "block")
+        : (product.style.display = "none");
+    }
+  });
+};
+
 inputSection.addEventListener("keydown", searchHandler);
 btnEls.forEach((btnEl) => {
   btnEl.addEventListener("click", btnHandler);
 });
 themeToggle.addEventListener("click", themeHandler);
+priceButton.addEventListener("click", priceHandler);
